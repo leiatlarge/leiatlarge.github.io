@@ -15,9 +15,11 @@
     
 
 
-<link rel="stylesheet" href="/css/bundle.min.ff767a997074423a3410af4ab908b8314f37f6806469dbec5d6c8cd576765684.css">
+<link rel="stylesheet" href="/css/bundle.min.3cd72b411adcf3e2202aad4e4c7e41e3708c4f1780b2562d054604528dbb124b.css">
     
 
+    <script src="/jquery.slim.min.js"></script>
+    <script defer src="/tw-elements.min.js"></script>
 </head>
 
 <body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl 
@@ -32,16 +34,14 @@
         </a>
     </div>
 
-    <div class="min-h-[100px]"></div>
-<div class="fixed inset-x-0 min-h-[100px] opacity-65 pl-[24px] pr-[24px] bg-gradient-to-b from-neutral from-60% to-transparent mix-blend-normal"
-    style="z-index:80"></div>
+    <div class="min-h-[150px]"></div>
 <div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
     <div id="menu-blur"
         class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl">
     </div>
     <div class="relative max-w-[64rem] ml-auto mr-auto">
 
-        <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px" class="main-menu flex items-center justify-between px-4 py-6 
+        <div class="main-menu flex items-center justify-between px-4 py-6 
            sm:px-6 md:justify-start space-x-3">
             
 
@@ -54,14 +54,21 @@
                 <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
                     
                     
-                    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+                    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600">
     
     <p class="text-base font-medium" title="">
-        Blog
+        Home
     </p>
 </a>
                     
-                    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+                    <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600">
+    
+    <p class="text-base font-medium" title="">
+        Projects
+    </p>
+</a>
+                    
+                    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600">
     
     <p class="text-base font-medium" title="">
         Topics
@@ -107,10 +114,19 @@
 
                             
                             <li class="mt-1">
-    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600">
+    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600">
         
         <p class="text-bg font-bg" title="">
-            Blog
+            Home
+        </p>
+    </a>
+</li>
+                            
+                            <li class="mt-1">
+    <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600">
+        
+        <p class="text-bg font-bg" title="">
+            Projects
         </p>
     </a>
 </li>
@@ -143,7 +159,21 @@
     });
 </script>
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        var rootPaths = path.split('/');
 
+        if (rootPaths.length > 1 && rootPaths[1] !== '' ) {
+            path = '/' + rootPaths[1] + '/';
+        }
+
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
 
     <div class="relative flex flex-col grow">
         <main id="main-content" class="grow">
@@ -158,6 +188,7 @@
 
             
         </main><footer class="bottom-0 w-full p-4 text-xs text-center text-slate-500">
+    <p> Made by Lei </p>
 <script src="/zoom.min.js"></script>
 <script>
     mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
