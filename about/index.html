@@ -15,7 +15,7 @@
     
 
 
-<link rel="stylesheet" href="/css/bundle.min.3cd72b411adcf3e2202aad4e4c7e41e3708c4f1780b2562d054604528dbb124b.css">
+<link rel="stylesheet" href="/css/bundle.min.a86ccca8fa09baf54eaa56706ada3fd803a1ac68c658a86b2847444ec16692c9.css">
     
 
     <script src="/jquery.slim.min.js"></script>
@@ -68,10 +68,17 @@
     </p>
 </a>
                     
-                    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600">
+                    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600">
     
     <p class="text-base font-medium" title="">
-        Topics
+        About
+    </p>
+</a>
+                    
+                    <a href="/pdf/design.pdf"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600">
+    
+    <p class="text-base font-medium" title="">
+        CV
     </p>
 </a>
                     
@@ -132,10 +139,19 @@
 </li>
                             
                             <li class="mt-1">
-    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600">
+    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600">
         
         <p class="text-bg font-bg" title="">
-            Topics
+            About
+        </p>
+    </a>
+</li>
+                            
+                            <li class="mt-1">
+    <a href="/pdf/design.pdf"  class="flex items-center text-gray-500 hover:text-primary-600">
+        
+        <p class="text-bg font-bg" title="">
+            CV
         </p>
     </a>
 </li>
@@ -178,21 +194,67 @@
     <div class="relative flex flex-col grow">
         <main id="main-content" class="grow">
             
- <p> This is a single page </p>
- <p>I&rsquo;m learning Hugo, one step at a time.</p>
-<h3 id="these-are-my-favorite-vacation-spots">These are my favorite vacation spots</h3>
-<div id="map">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
-    <script>
-     let markers = [{"latitude":-1.484751,"longitude":35.101904,"name":"Masai Mara National Reserve"},{"latitude":-2.333333,"longitude":34.833332,"name":"Serengeti National Park"},{"latitude":-19.304543,"longitude":22.643703,"name":"Okavango Delta"},{"latitude":-18.855591,"longitude":16.32932,"name":"Etosha National Park"},{"latitude":3.882778,"longitude":33.874444,"name":"Kidepo Valley Park"}];
-    </script>
-    <script src="/map.js"></script>
-</div> 
+
+<div class="relative pt-16 pb-32">
+    <div class="relative">
+        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div class="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+                <article class="max-w-full prose dark:prose-invert">
+
+                    
+                    <img class="rounded-xl  shadow-xl " src="/images/about-headshot.jpg">
+
+                    <section><p>What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?
+What if I type something very long?</p>
+</section>
+                    
+                    <button onclick="window.open(&#34;/pdf/design.pdf&#34;)" class="has-tooltip-link mr-2 mt-2 p-1 mb-0 text-xs !rounded-md !text-primary-700 
+                border border-primary-700 !no-underline 
+                hover:!bg-primary-700 hover:!text-neutral">
+                        <span
+                            class="tooltip rounded shadow-lg p-2 bg-neutral text-neutral-500 border border-neutral-200 mt-8"
+                            style="z-index:10">
+                            Click to download my college design portfolio
+                        </span>
+                        Design Portfolio
+                    </button>
+
+                    <button onclick="window.open(&#34;/pdf/design.pdf&#34;)" class="has-tooltip-link mr-2 mt-2 p-1 mb-0 text-xs !rounded-md !text-primary-700 
+                border border-primary-700 !no-underline 
+                hover:!bg-primary-700 hover:!text-neutral">
+                        <span
+                            class="tooltip rounded shadow-lg p-2 bg-neutral text-neutral-500 border border-neutral-200 mt-8"
+                            style="z-index:10">
+                            Click to download my CV
+                        </span>
+                        CV
+                    </button>
+
+                </article>
+            </div>
+            <div class="mt-6 sm:mt-16 lg:mt-0 mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+                <div class="-mr-48 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0" style="width:100%">
+                    
+                    <img class="w-full rounded-xl shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                        src="/images/about-background.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
             
-        </main><footer class="bottom-0 w-full p-4 text-xs text-center text-slate-500">
+        </main><footer class="bottom-0 w-full p-10 text-xs text-center text-slate-500">
     <p> Made by Lei </p>
 <script src="/zoom.min.js"></script>
 <script>
